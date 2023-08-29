@@ -7,4 +7,8 @@
     <RootNamespace>hr_erp.Web</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\hr-erp.Infrastructure\hr-erp.Application.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hr-erp.Domain", "hr-erp.Domain\hr-erp.Domain.csproj", "{5DE9E83F-3989-4A48-83AA-03A3E4D21604}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hr-erp.Infrastructure", "hr-erp.Domain\hr-erp.Infrastructure.csproj", "{5DE9E83F-3989-4A48-83AA-03A3E4D21604}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hr-erp.Infrastructure", "hr-erp.Infrastructure\hr-erp.Infrastructure.csproj", "{5F7C2016-3C60-468E-AC49-71751A3B37E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hr-erp.Application", "hr-erp.Infrastructure\hr-erp.Application.csproj", "{5F7C2016-3C60-468E-AC49-71751A3B37E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hr-erp.Web", "hr-erp.Web\hr-erp.Web.csproj", "{7FE73ED2-6DF6-4DEB-89E6-18FBCFB050F1}"
 EndProject

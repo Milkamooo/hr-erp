@@ -2,9 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>hr_erp.Domain</RootNamespace>
+    <RootNamespace>hr_erp.Application</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\hr-erp.Domain\hr-erp.Infrastructure.csproj" />
+  </ItemGroup>
 
 </Project>
