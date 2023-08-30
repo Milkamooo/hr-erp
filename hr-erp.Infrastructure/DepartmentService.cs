@@ -4,14 +4,14 @@ namespace hr_erp.Application
 {
     public class DepartmentService
     {
-        LocalRepository repository = new LocalRepository();
+        LocalRepository localRepository = new();
         public List<Department>? GetDepartments()
         {
-            return repository.Departments;
+            return localRepository.Departments;
         }
-        public Department GetDepartment(int id)
+        public Department? GetDepartment(int id)
         {
-            return repository.Departments!.Where(d => d.Id.Equals(id)).FirstOrDefault();
+            return localRepository.Departments!.Where(d => d.Id.Equals(id)).FirstOrDefault();
         }
 
         public void AddDepartment(Department department)

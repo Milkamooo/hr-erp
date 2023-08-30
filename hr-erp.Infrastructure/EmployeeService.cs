@@ -9,24 +9,24 @@ namespace hr_erp.Application
 {
     public class EmployeeService
     {
-        LocalRepository repository = new LocalRepository();
+        LocalRepository localRepository = new();
         public List<Employee>? GetEmployees()
         {
-            return repository.Employees;
+            return localRepository.Employees;
         }
-        public Employee GetEmployee(int id)
+        public Employee? GetEmployee(int id)
         {
-            return repository.Employees!.Where(e => e.Id.Equals(id)).FirstOrDefault();
+            return localRepository.Employees!.Where(e => e.Id.Equals(id)).FirstOrDefault();
         }
 
         public void AddEmployee(Employee employee)
         {
-            repository.Employees.Add(employee);
+            localRepository.Employees.Add(employee);
         }
 
         public void UpdateEmployee(Employee employee)
         {
-            var emp = repository.Employees.Where(e => e.Id.Equals(employee.Id)).FirstOrDefault();
+            var emp = localRepository.Employees.Where(e => e.Id.Equals(employee.Id)).FirstOrDefault();
             if (emp is not null)
             {
                 emp.Name = employee.Name;
@@ -40,10 +40,10 @@ namespace hr_erp.Application
         }
         public void DeleteEmployee(int id)
         {
-            var employee = repository.Employees!.Where(e => e.Id.Equals(id)).FirstOrDefault();
+            var employee = localRepository.Employees!.Where(e => e.Id.Equals(id)).FirstOrDefault();
             if (employee is not null)
             {
-                repository.Employees.Remove(employee);
+                localRepository.Employees.Remove(employee);
             }
         }
     }

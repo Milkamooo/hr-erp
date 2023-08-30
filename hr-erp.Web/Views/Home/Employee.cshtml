@@ -1,0 +1,24 @@
+﻿@model hr_erp.Infrastructure.Employee
+
+<div class="mt-5">
+    <a asp-action="Employees">Назад</a>
+    <h3 class="text-center">Карточка сотрудника</h3>
+    <div class="card text-center mt-5">
+        <div class="card-header">
+            @Model.LastName @Model.Name
+        </div>
+        <div class="card-body">
+            <p class="card-text">Заработная плата: @Model.Salary</p>
+            <p class="card-text">Бонусы: @Model.Bonus</p>
+            @if (Model.Permanent.Equals(true))
+            {
+                <p class="card-text">Постоянный сотрудник</p>
+            }
+            else
+            {
+                <p class="card-text">Временный сотрудник</p>
+            }
+            <a href="#" class="btn btn-primary">Редактировать</a>
+        </div>
+    </div>
+</div>
